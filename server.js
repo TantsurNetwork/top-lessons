@@ -10,7 +10,7 @@ const server = http.createServer(function (request, response) {
           response.end(fs.readFileSync('index.html', 'utf8'));
       }
 
-      console.log('port = ', process.env.port);
+      console.log('port = ', process.env.PORT);
 
       console.log( request.method, request.url );
 })
