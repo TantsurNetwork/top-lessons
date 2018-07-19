@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const server = http.createServer(function (request, response) {
 
-      if (request.url == "/style.css") {
+      if (request.url === "/style.css") {
           response.end(fs.readFileSync('style.css', 'utf8'));
       }
       else {
