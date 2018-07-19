@@ -10,9 +10,10 @@ const server = http.createServer(function (request, response) {
           response.end(fs.readFileSync('index.html', 'utf8'));
       }
 
-      console.log( request.method, request.url );
+      console.log('port = ', process.env.port);
 
+      console.log( request.method, request.url );
 })
 
-server.listen(3000);
+server.listen(process.env.port || 3000);
 console.log("Server started");
